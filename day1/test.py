@@ -3,10 +3,10 @@ def SortArray(array):
         resultArr = [];
         for x in array:
             resultArr.append(x * x)
-            resultArr.sort()
+        resultArr.sort()
         return resultArr
     else: 
         return []
 
-print(SortArray([-5,-1,2,3]))
+print(SortArray([-3,1,2,7]))
 print(SortArray([]))
