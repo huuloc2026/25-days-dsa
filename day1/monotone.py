@@ -1,20 +1,19 @@
-def check_monotonic(array):
-    first = array[0]
-    last = array[-1]
-    
-    if first == last:
-        for i in range(len(array) - 1):
-            if array[i + 1] != array[i]:
-                return False
-    elif first < last:
-        # non-decreasing
-        for i in range(len(array) - 1):
-            if array[i + 1] < array[i]:
-                return False
-    else:
-        # non-increasing
-        for i in range(len(array) - 1):
-            if array[i + 1] > array[i]:
-                return False
-                
-    return True
+def monotonic_array(array):
+    if len(array) <= 1:
+        return True
+    increasing = decreasing = True
+    for i in range(1, len(array)):
+        if array[i] > array[i - 1]:
+            decreasing = False
+        elif array[i] < array[i - 1]:
+            increasing = False            
+    return increasing or decreasing
+array1 = [1,2,3,4,3,5]
+array2 = [5, 4, 3, 2, 1]
+array3 = []
+array4 = [1]
+
+print(monotonic_array(array1)) 
+print(monotonic_array(array2))  
+print(monotonic_array(array3))
+print(monotonic_array(array4))
