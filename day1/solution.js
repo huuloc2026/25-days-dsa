@@ -8,7 +8,6 @@ function SortSquarredArray(array){
         let pointerLeft = 0;
         let pointerRight = array.length - 1;
 
-    
         for (let i = array.length - 1; i >= 0; i--) {
             const leftSquared = array[pointerLeft] * array[pointerLeft];
             const rightSquared = array[pointerRight] * array[pointerRight];
@@ -26,6 +25,8 @@ function SortSquarredArray(array){
         return [];
     }
 }
+
+
 
 const array_testcase2 = [-3 , -2, 1, 5,4] 
 const b = [1,4,5,7]
