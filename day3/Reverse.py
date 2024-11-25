@@ -2,7 +2,6 @@ def Rotate(array,k):
     reverse(array,0,len(array)-1)
     arrayK = reverse(array,0,k-1)
     arrayEnd = reverse(array,k,len(array)-1)
-
     return array
 
 def reverse(arr,start,end):

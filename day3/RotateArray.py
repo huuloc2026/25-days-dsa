@@ -1,11 +1,11 @@
 def solution(A, K):
     # Implement your solution here
-    K = K % len(A)
-    lastElements = A[-K:] 
-    restOfArray = A[:-K]
-    print(lastElements)
-    print(restOfArray)
-    arr = lastElements + restOfArray
+
+    firstElement = A[0]
+
+    #[9,3,9,3,9,7,9]
+    for i in len(A):
+        if(A[i]!==A[i+1]):
 
     return arr
 
